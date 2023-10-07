@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1>Fake News Detection</h1>
+            <ul>
+                <li><a href="\">Home</a></li>
+          <li><a href="\about">About</a></li>
+          <li><a href="\contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section id="about">
+            <h2>About Fake News Detection</h2>
+            <p>
+                The "Fake News Detection" system is an application designed to identify and
+                classify news articles as either real or fake. The system uses advanced natural
+                language processing techniques and machine learning algorithms to analyze the
+                content of news articles and make accurate predictions about their authenticity.
+            </p>
+            <p>
+                Misinformation and fake news have become widespread in today's digital age,
+                leading to significant consequences such as public confusion, polarized opinions,
+                and the erosion of trust in media and information sources. The goal of this
+                application is to provide a tool that helps users discern the credibility of
+                news articles they come across online.
+            </p>
+            <p>
+                The system was built using Python programming language and leverages the
+                scikit-learn library for machine learning tasks. It was trained on a labeled dataset
+                containing examples of both real and fake news articles to learn patterns and
+                features that distinguish between the two types.
+            </p>
+            
+        </section>
+
+        <div class="blank-space"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Fake News Detection. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fake News Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <h1>Fake News Detection</h1>
+        <ul>
+          <li><a href="\">Home</a></li>
+          <li><a href="\about">About</a></li>
+          <li><a href="\contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <section id="home">
+        <h2>Welcome to Fake News Detection</h2>
+        <p>
+          "Fake news is a virus that preys on ignorance and spreads through
+          apathy; the antidote is critical thinking and an unwavering commitment
+          to seek the truth."
+        </p>
+      </section>
+
+      <section id="about">
+        <h2>Fake News Detection</h2>
+        <form action="/" method="post">
+          <textarea name="txt" rows="4" cols="50" id="news_article"></textarea><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+
+      <div class="container">
+        <h3>Entered News Text is: </h3>
+        {{ request.form['txt'] }}
+    <p>{% if result == 0 %}
+        <p style="color: red;" class="alert alert-danger">Fake News</p>
+       {% else  %}
+        <p><p style="color:seagreen;" class="alert alert-success">True News</p></p>
+       {% endif  %}
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="/submit" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="blank-space"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2023 Fake News Detection. All rights reserved </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
